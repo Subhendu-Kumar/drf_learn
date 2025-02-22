@@ -1,5 +1,4 @@
 from rest_framework.renderers import JSONRenderer  # type: ignore
-from rest_framework.response import Response  # type: ignore
 from restapp1.serializer import stu_serializer
 from django.http import HttpResponse
 from restapp1 import models
