@@ -22,5 +22,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("restapp/", include("restapp.urls")),
     path("restapp1/", include("restapp1.urls")),
-    path("", include("restapp2.urls")),
+    path("restapp2/", include("restapp2.urls")),
+    path("", include("restapp3.urls")),
 ]
