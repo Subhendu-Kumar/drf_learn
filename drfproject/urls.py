@@ -26,5 +26,6 @@ urlpatterns = [
     path("restapp3/", include("restapp3.urls")),
     path("restapp4/", include("restapp4.urls")),
     path("restapp5/", include("restapp5.urls")),
-    path("", include("restapp6.urls")),
+    path("restapp6/", include("restapp6.urls")),
+    path("", include("restapp7.urls")),
 ]

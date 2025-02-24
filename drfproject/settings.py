@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "restapp4",
     "restapp5",
     "restapp6",
+    "restapp7",
 ]
 
 MIDDLEWARE = [
