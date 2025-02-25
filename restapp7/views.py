@@ -78,3 +78,12 @@ class TesterViewSet(viewsets.ModelViewSet):
 
     queryset = models.tester.objects.all()
     serializer_class = serializer.tester_serializer
+
+
+class TesterView(viewsets.ReadOnlyModelViewSet):
+    """
+    A viewset that provides the standard actions (list, create, retrieve, update, delete)
+    """
+
+    queryset = models.tester.objects.all()
+    serializer_class = serializer.tester_serializer

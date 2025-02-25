@@ -5,6 +5,7 @@ from rest_framework.routers import DefaultRouter  # type: ignore
 # Using DefaultRouter to generate URLs automatically
 router = DefaultRouter()
 router.register(r"testers", views.TesterViewSet)  # Endpoint: /testers/
+router.register(r"helo", views.TesterView, basename="tester_helo")  # Unique basename
 
 urlpatterns = [
     path("", include(router.urls)),
