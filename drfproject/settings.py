@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework.authtoken",
     "restapp",
     "restapp1",
     "restapp2",
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     "restapp6",
     "restapp7",
     "restapp8",
+    "restapp9",
+    "restapp10",
 ]
 
 MIDDLEWARE = [
@@ -108,7 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
