@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework.authtoken",
     "restapp",
     "restapp1",
     "restapp2",
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     "restapp8",
     "newrestapp",
     "newrestapp1",
+    "newrestapp2",
 ]
 
 MIDDLEWARE = [
