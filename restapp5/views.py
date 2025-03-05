@@ -1,6 +1,5 @@
 import io
 from rest_framework.parsers import JSONParser  # type: ignore
-from rest_framework.renderers import JSONRenderer  # type: ignore
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from restapp5.serializer import person_serializer
