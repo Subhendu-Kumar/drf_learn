@@ -6,6 +6,7 @@ from authapp.serializer import (
     UserSerializer,
     UserLoginSerializer,
     UserProfileSerializer,
+    changePasswordSerializer,
 )
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken  # type: ignore
@@ -63,3 +64,19 @@ class profile(APIView):
             request.user, context={"request": request}
         )  # Serialize user instance
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class changePasswordWithOldPass(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        serializer = changePasswordSerializer(
+            data=request.data, context={"user": request.user}
+        )
+
+        if serializer.is_valid():
+            request.user.set_password(serializer.validated_data["new_password"])
+            request.user.save()
+            return Response({"message": "Password changed successfully."}, status=200)
+
+        return Response(serializer.errors, status=400)
